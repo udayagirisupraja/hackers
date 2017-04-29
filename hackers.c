@@ -374,16 +374,13 @@ int f_countwords(char *file) {
     fp = fopen(file, "r");
     if (fp == NULL) {
         printf("%s file do not exists\n", file);
- 
         return 0;
- 
     }
-
 
     while ((ch = fgetc(fp)) != EOF)
         if (ch == ' ' || ch == '\n')                 // if words in your files are separated by single space [' '] //
             count++;
- 
-    return count;
+    
     fclose(fp);
+    return count;
 }
